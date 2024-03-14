@@ -1,0 +1,16 @@
+<p-card>
+	<p>Form</p>
+	<sf-form [schema]="schemaObject" (onChange)="this.currentModel=$event.value">
+	</sf-form>
+
+	<button (click)="rerenderForm($event)">Re-render form</button>
+<button (click)="addNewProperty($event)">Add new property</button>
+</p-card>
+
+<p>Model</p>
+<pre>
+  {{currentModel|json}}
+</pre>
+<pre>
+  {{this.schemaObject|json}}
+</pre>

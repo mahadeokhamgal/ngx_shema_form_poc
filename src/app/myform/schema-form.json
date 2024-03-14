@@ -1,0 +1,65 @@
+{
+  "properties": {
+    "paragraph": {
+      "type": "string",
+      "title": "Paragraph",
+      "description": "Example text for a non input widget",
+      "default": "Set here some value that should end into model.",
+      "widget": {
+        "id": "paragraph"
+      }
+    },
+    "name": {
+      "type": "string",
+      "title": "Name",
+      "description": "Example of validation with Z-Schema. (Only uppercase allowed, type some text here)",
+      "placeholder": "e.g: DOE",
+      "pattern": "^[A-Z]{1,}$",
+      "minLenght": 1,
+      "maxLength": 10
+    },
+    "forename": {
+      "type": "string",
+      "title": "Given name",
+      "description": "Your given name here. Has a custom validator. (Must not be the same as 'Name')",
+      "placeholder": "e.g: John"
+    },
+    "gender": {
+      "type": "string",
+      "title": "Gender",
+      "description": "Select gender here",
+      "widget": {
+        "id": "radio"
+      },
+      "oneOf": [
+        {
+          "enum": [
+            ""
+          ],
+          "description": "None"
+        },
+        {
+          "enum": [
+            "m"
+          ],
+          "description": "Male"
+        },
+        {
+          "enum": [
+            "f"
+          ],
+          "description": "Female"
+        },
+        {
+          "enum": [
+            "x"
+          ],
+          "description": "Other"
+        }
+      ]
+    }
+  },
+  "required": [
+    "name"
+  ]
+}
