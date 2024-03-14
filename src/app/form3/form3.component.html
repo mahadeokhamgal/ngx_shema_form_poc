@@ -1,0 +1,18 @@
+<div class="container">
+    <!-- <div class="col-10"> -->
+
+        <div class="col-3">
+            <sf-form [schema]="schemaObject" (onChange)="this.currentModel=$event.value"></sf-form>
+        </div>
+        <div class="col-3">
+            <pre>
+                {{currentModel | json}}
+              </pre>
+        </div>
+        <div class="col-3">
+            <pre>
+                {{schemaObject | json}}
+            </pre>
+        </div>
+    <!-- </div> -->
+</div>
